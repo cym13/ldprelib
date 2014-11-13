@@ -4,8 +4,8 @@
 /* Compile with gcc -o mylib.dylib -fPIC -shared */
 /*************************************************/
 
-#define MIN(a,b) (a)<(b) ? (a) : (b)
-#define MAX(a,b) (a)<(b) ? (b) : (a)
+#define MIN(a,b) ((a)<(b) ? (a) : (b))
+#define MAX(a,b) ((a)<(b) ? (b) : (a))
 
 ssize_t strlen(const char* s)
 {
