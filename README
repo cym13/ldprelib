@@ -1,0 +1,30 @@
+Description
+===========
+
+This is just a collection of premade interesting librairies to be loaded
+using the LD_PRELOAD trick, a helper for crackmes.
+
+Installation
+============
+
+Compile with gcc -o ldprelib.so -fPIC -shared ldprelib.c
+
+Use for example rarun2 to launch the script with the library
+
+    rarun2 program=crackme preload=prelib.so
+
+License
+=======
+
+This program is under the GPLv3 License.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+Contact
+=======
+
+Main developper: Cédric Picard
+Email:           cedric.picard@efrei.net
+Twitter:         @Cym13
+GPG:             383A 76B9 D68D 2BD6 9D2B  4716 E3B9 F4FE 5CED 42CB
