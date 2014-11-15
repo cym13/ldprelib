@@ -1,0 +1,5 @@
+a.out
+ldprelib.so
+peda-session-a.out.txt
+test.c
+.gdb_history
