@@ -4,6 +4,11 @@
 /* Compile with gcc -o mylib.dylib -fPIC -shared */
 /*************************************************/
 
+// Coroutines
+#define BEGIN    static int state=0; switch (state) { case 0:
+#define YIELD(x) do { state=__LINE__; return x; case __LINE__:; } while(0);
+#define FINISH   }
+
 #define MIN(a,b) ((a)<(b) ? (a) : (b))
 #define MAX(a,b) ((a)<(b) ? (b) : (a))
 
