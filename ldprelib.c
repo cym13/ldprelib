@@ -12,7 +12,7 @@
 #define MIN(a,b) ((a)<(b) ? (a) : (b))
 #define MAX(a,b) ((a)<(b) ? (b) : (a))
 
-unsigned int strlen(const char* s)
+unsigned long strlen(const char* s)
 {
     int i;
 
@@ -43,7 +43,7 @@ void* memcpy(void* dest, const void* src, size_t len)
     while (i-- > 0)
       *d++ = *s++;
 
-    fprintf(stderr, "[ldpreload] memcpy(%p, %p, %d) = %p",
+    fprintf(stderr, "[ldpreload] memcpy(%p, %p, %ld) = %p",
                                       dest, src, len, dest);
 
     return dest;
@@ -63,7 +63,7 @@ void* memccpy(void* dest, const void* src, int c, size_t n)
         break;
       }
 
-    fprintf(stderr, "[ldpreload] memccpy(%p, %p, %d, %d) = %p",
+    fprintf(stderr, "[ldpreload] memccpy(%p, %p, %d, %ld) = %p",
                                         dest, src, c, n, ret);
 
     return ret;
